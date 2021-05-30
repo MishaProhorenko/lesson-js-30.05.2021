@@ -19,46 +19,52 @@ btnMinus.addEventListener('click', () => {
 // 	divCount.className = 'blue'
 // })
 
-let getCollectionBtn = ()=>{
-	let btns = document.body.querySelectorAll('button');
-	console.log(btns)
-	for (let button of btns){
-		if (button.className === 'red') {
-			button.addEventListener('click', () => {
-				divCount.style.color = 'red'
-			})
-		}
-		if (button.className === 'green') {
-			button.addEventListener('click', () => {
-				divCount.style.color = 'green'
-			})
-		}
-		if (button.className === 'blue') {
-			button.addEventListener('click', () => {
-				divCount.style.color = 'blue'
-			})
-		}
-	}
-	// for (let i = 0; i < btns.length; i++) {
-	// 	if (btns[i].className === 'red') {
-	// 		btns[i].addEventListener('click', () => {
-	// 			divCount.style.color = 'red'
-	// 		})
-	// 	}
-	// 	if (btns[i].className === 'green') {
-	// 		btns[i].addEventListener('click', () => {
-	// 			divCount.style.color = 'green'
-	// 		})
-	// 	}
-	// 	if (btns[i].className === 'blue') {
-	// 		btns[i].addEventListener('click', () => {
-	// 			divCount.style.color = 'blue'
-	// 		})
-	// 	}
-	// }
-}
-getCollectionBtn()
 
+let btns = document.body.querySelectorAll('button');
+console.log(btns)
+// for (let button of btns){
+// 	if (button.className === 'red') {
+// 		button.addEventListener('click', () => {
+// 			divCount.style.color = 'red'
+// 		})
+// 	}
+// 	if (button.className === 'green') {
+// 		button.addEventListener('click', () => {
+// 			divCount.style.color = 'green'
+// 		})
+// 	}
+// 	if (button.className === 'blue') {
+// 		button.addEventListener('click', () => {
+// 			divCount.style.color = 'blue'
+// 		})
+// 	}
+// }
+// for (let i = 0; i < btns.length; i++) {
+// 	if (btns[i].className === 'red') {
+// 		btns[i].addEventListener('click', () => {
+// 			divCount.style.color = 'red'
+// 		})
+// 	}
+// 	if (btns[i].className === 'green') {
+// 		btns[i].addEventListener('click', () => {
+// 			divCount.style.color = 'green'
+// 		})
+// 	}
+// 	if (btns[i].className === 'blue') {
+// 		btns[i].addEventListener('click', () => {
+// 			divCount.style.color = 'blue'
+// 		})
+// 	}
+// }
+
+
+for (let button of btns) {
+	if (button.className) {
+		button.addEventListener('click', () => {
+			divCount.className = button.className;
+		})
+	}
+}
 
 
 
