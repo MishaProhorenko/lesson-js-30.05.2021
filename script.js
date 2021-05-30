@@ -1,14 +1,14 @@
 'use strict';
 
 
-let countOfClicks = 0;
-count.innerText = countOfClicks;
-btnPlus.addEventListener('click', () => {
-	count.innerText = ++countOfClicks;
-})
-btnMinus.addEventListener('click', () => {
-	count.innerText = --countOfClicks;
-})
+// let countOfClicks = 0;
+// count.innerText = countOfClicks;
+// btnPlus.addEventListener('click', () => {
+// 	count.innerText = ++countOfClicks;
+// })
+// btnMinus.addEventListener('click', () => {
+// 	count.innerText = --countOfClicks;
+// })
 // btnRed.addEventListener('click', () => {
 // 	divCount.className = 'red'
 // })
@@ -58,13 +58,69 @@ console.log(btns)
 // }
 
 
-for (let button of btns) {
-	if (button.className) {
-		button.addEventListener('click', () => {
-			divCount.className = button.className;
-		})
-	}
-}
+// for (let button of btns) {	
+// 	if (button.className) {
+// 		button.addEventListener('click', () => {
+// 			divCount.className = button.className;
+// 		})
+// 	}
+// }
+
+
+// один клик обновляет только себя
+// двойной и себя и второй
+
+
+
+
+// let divContainer = document.body.querySelector('.click-container');
+// // console.log(divContainer)
+
+
+// let countOne = document.createElement('div');
+// countOne.innerHTML('<span>Count of clicks one: <span id="countOne"></span> </span>')
+// document.body.append(countOne)
+// let countTwo = document.createElement('div');
+// countTwo.innerHTML('<span>Count of clicks two: <span id="countTwo"></span> </span>')
+// document.body.append(countTwo)
+
+
+
+// let countOfClicksOne = 0;
+// countOne.innerText = countOfClicksOne;
+// divContainer.addEventListener('click', () => {
+// 	countOne.innerText = ++countOfClicksOne;
+// })
+
+// let countOfClicksTwo = 0;
+// countTwo.innerText = countOfClicksTwo;
+// divContainer.addEventListener('dblclick', () => {
+// 	countOne.innerText = countOfClicksOne--;
+// 	countTwo.innerText = ++countOfClicksTwo;
+// })
+
+
+const clickCont = document.querySelector('.click-container');
+
+const singleClickeCounter = document.createElement('div');
+singleClickeCounter.innerHTML = '<span>Count of single clicks</span><span id=forOne></span>';
+document.body.append(singleClickeCounter);
+
+const doubleClickeCounter = document.createElement('div');
+doubleClickeCounter.innerHTML = '<span>Count of dounle clicks</span><span id=forDouble></span>';
+document.body.append(doubleClickeCounter);
+
+let single = 0;
+let double = 0;
+
+clickCont.onclick = () => {
+	forOne.innerText = ++single;
+};
+
+clickCont.ondblclick = () => {
+	forDouble.innerText = ++double;
+};
+
 
 
 
